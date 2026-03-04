@@ -3,14 +3,14 @@ import dotImg from '../../assets/Ellipse 22.png'
 import date from '../../assets/ri_calendar-line.png'
 
 
-export const TicketCard = ({ticket}) => {
+export const TicketCard = ({ticket , onAdd}) => {
   return (
-      <div className=''>
+      <div onClick={() =>onAdd(ticket)}>
       <div class="card bg-white   shadow-sm mb-8">
 
-  <div class="card-body text-black">
-    <div className='flex justify-between'>
-        <h2 class="card-title text-2xl">
+  <div class="card-body text-black space-y-4  ">
+    <div className='flex justify-between '>
+        <h2 class="card-title text-2xl ">
       {ticket.title}
     </h2>
     <div class="badge bg-[#70e985] border-none rounded-full px-5 py-5 text-xl font-bold text-center flex justify-center text-[#0c4716]"><img className='h-5' src={dotImg} alt="" />Open</div>

@@ -5,6 +5,7 @@ import { Banner } from './ui/banner/banner'
 import { Navbar } from './ui/navbar'
 import { Tickets } from './ui/tickets/tickets'
 import { Footer } from './ui/footer'
+import { useState } from 'react'
 // import { use } from 'react'
 
 
@@ -16,6 +17,18 @@ const fetchTickets = async () =>{
 
 function App() {
   const playerPromise = fetchTickets()
+
+  const [inProgress, setInProgress] = useState([]) 
+
+  const handleInProgress = (ticket)=>{
+    alert('Task Added')
+    setInProgress([...inProgress,ticket ])
+  }
+  const handleComplete = (id)=>{
+    alert('Task Completed')
+    const updated = inProgress.filter(task => task.id !==id)
+    setInProgress(updated)
+  }
   
 
   return (
@@ -23,10 +36,15 @@ function App() {
     
    <Navbar></Navbar>
 
-   <Banner></Banner>
+   <Banner count = {inProgress.length}></Banner>
 
    <Suspense fallback={<div className='flex justify-center items-center '><span class="loading loading-ring loading-xl"></span><span class="loading loading-ring loading-xl"></span><span class="loading loading-ring loading-xl"></span></div>}>
-    <Tickets playerPromise={playerPromise}></Tickets>
+    <Tickets 
+    playerPromise={playerPromise}
+    onAdd = {handleInProgress}
+    inProgress={inProgress} 
+    handleComplete={handleComplete}
+    ></Tickets>
    </Suspense>
 
    <Footer></Footer>
