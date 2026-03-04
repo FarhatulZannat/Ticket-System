@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1001,
+    "title": "Login Issue",
+    "description": "Customer unable to login with correct credentials.",
+    "customer": "Alice Johnson",
+    "priority": "High",
+    "status": "In-Progress",
+    "createdAt": "2026-03-01"
+  },
+  {
+    "id": 1002,
+    "title": "Payment Failure",
+    "description": "Payment not processing through credit card.",
+    "customer": "Bob Smith",
+    "priority": "Critical",
+    "status": "Pending",
+    "createdAt": "2026-03-01"
+  },
+  {
+    "id": 1003,
+    "title": "Account Verification Delay",
+    "description": "Verification email not received by customer.",
+    "customer": "Carol Davis",
+    "priority": "Medium",
+    "status": "Resolved",
+    "createdAt": "2026-03-02"
+  },
+  {
+    "id": 1004,
+    "title": "Bug in Dashboard",
+    "description": "Graphs not loading correctly on the dashboard.",
+    "customer": "David Wilson",
+    "priority": "High",
+    "status": "In-Progress",
+    "createdAt": "2026-03-02"
+  },
+  {
+    "id": 1005,
+    "title": "Unable to Download Invoice",
+    "description": "PDF invoice download button throws error.",
+    "customer": "Eva Brown",
+    "priority": "Low",
+    "status": "Pending",
+    "createdAt": "2026-03-02T12:15:00Z"
+  },
+  {
+    "id": 1006,
+    "title": "App Crash on Mobile",
+    "description": "Mobile app crashes when opening notifications tab.",
+    "customer": "Frank Thomas",
+    "priority": "Critical",
+    "status": "In-Progress",
+    "createdAt": "2026-03-03T07:50:00Z"
+  },
+  {
+    "id": 1007,
+    "title": "Feature Request: Dark Mode",
+    "description": "Customer requested dark mode for the app.",
+    "customer": "Grace Lee",
+    "priority": "Medium",
+    "status": "Resolved",
+    "createdAt": "2026-03-03T10:10:00Z"
+  },
+  {
+    "id": 1008,
+    "title": "Email Notifications Not Received",
+    "description": "Automated emails not reaching customer's inbox.",
+    "customer": "Henry Clark",
+    "priority": "High",
+    "status": "Pending",
+    "createdAt": "2026-03-03"
+  },
+  {
+    "id": 1009,
+    "title": "Profile Picture Upload Issue",
+    "description": "Unable to upload profile picture larger than 5MB.",
+    "customer": "Isabella Martin",
+    "priority": "Low",
+    "status": "Resolved",
+    "createdAt": "2026-03-04"
+  },
+  {
+    "id": 1010,
+    "title": "Slow Page Loading",
+    "description": "Pages take longer than expected to load.",
+    "customer": "Jack Robinson",
+    "priority": "Medium",
+    "status": "In-Progress",
+    "createdAt": "2026-03-04"
+  }
+]
