@@ -23,7 +23,7 @@ export const Navbar = () => {
           </ul>
       </ul>
     </div>
-    <a class="btn btn-ghost text-2xl text-black font-bold">CS--Ticket System</a>
+    <a className="btn btn-ghost text-2xl text-black hover:text-white font-bold">CS--Ticket System</a>
   </div>
   <div className='navbar-end flex lg:hidden' >
     <a className="btn  bg-gradient-to-r from-[#422AD5] to-[#705ee7] border-none">+ New Ticket</a>

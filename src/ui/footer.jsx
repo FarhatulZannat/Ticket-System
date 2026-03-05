@@ -8,8 +8,8 @@ import mail from '../assets/x.png'
 
 export const Footer = () => {
   return (
-    <div className='bg-black lg:p-30 p-6  '>
-        <div className='lg:flex gap-50 '> 
+    <div className='bg-black lg:p-30 p-6 '>
+        <div className='lg:flex gap-50 border-b-2 border-gray-400 '> 
             <div className='lg:w-100 lg:text-left text-center mb-6 '>
                 <h1 className='text-2xl font-bold text-white mb-6'>CS--Ticket System</h1>
                 <p className='text-[#A1A1AA]'>Ticket System is designed to help manage and track customer support requests efficiently. It allows quick creation, updating, and resolution of tickets.
@@ -34,7 +34,7 @@ export const Footer = () => {
                     <p>Terms & Conditions</p>
                     <p>Join Us</p>
                 </div>                
-                <div  className='space-y-6 text-[#A1A1AA]'>
+                <div  className='space-y-6 text-[#A1A1AA] mb-6'>
                     <h1 className='text-2xl font-bold text-white'>Social Links</h1>
                     <span className='flex items-center gap-2 justify-center lg:justify-start'><img src={x} alt="" />@CS--Ticket System</span>
                     <span className='flex items-center gap-2 justify-center lg:justify-start'><img src={Lin} alt="" />@CS--Ticket System</span>
@@ -44,6 +44,7 @@ export const Footer = () => {
 
             </div>
         </div>
+        <h1 className='text-center mt-6'>© 2025 CS — Ticket System. All rights reserved.</h1>
       
     </div>
   )
