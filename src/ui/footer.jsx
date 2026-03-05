@@ -8,14 +8,14 @@ import mail from '../assets/x.png'
 
 export const Footer = () => {
   return (
-    <div className='bg-black p-30'>
-        <div className='flex gap-50 '> 
-            <div className='w-100'>
+    <div className='bg-black lg:p-30 p-6  '>
+        <div className='lg:flex gap-50 '> 
+            <div className='lg:w-100 lg:text-left text-center mb-6 '>
                 <h1 className='text-2xl font-bold text-white mb-6'>CS--Ticket System</h1>
                 <p className='text-[#A1A1AA]'>Ticket System is designed to help manage and track customer support requests efficiently. It allows quick creation, updating, and resolution of tickets.
   Users can monitor progress and stay updated in real-time.The intuitive interface ensures a seamless experience for both support staff and customers.Built with modern web technologies, this system is responsive, fast, and reliable.</p>
             </div>
-            <div className='flex justify-between gap-15 '>
+            <div className='lg:flex justify-between gap-15 space-y-10 lg:text-left text-center '>
                 <div className='space-y-6 text-[#A1A1AA]'>
                     <h1 className='text-2xl font-bold text-white '>Company</h1>
                     <p>About us</p>
@@ -36,10 +36,10 @@ export const Footer = () => {
                 </div>                
                 <div  className='space-y-6 text-[#A1A1AA]'>
                     <h1 className='text-2xl font-bold text-white'>Social Links</h1>
-                    <span className='flex items-center gap-2'><img src={x} alt="" />@CS--Ticket System</span>
-                    <span className='flex items-center gap-2'><img src={Lin} alt="" />@CS--Ticket System</span>
-                    <span className='flex items-center gap-2'><img src={fb} alt="" />@CS--Ticket System</span>
-                    <span className='flex items-center gap-2'><img src={mail} alt="" />@CS--Ticket System</span>
+                    <span className='flex items-center gap-2 justify-center lg:justify-start'><img src={x} alt="" />@CS--Ticket System</span>
+                    <span className='flex items-center gap-2 justify-center lg:justify-start'><img src={Lin} alt="" />@CS--Ticket System</span>
+                    <span className='flex items-center gap-2 justify-center lg:justify-start'><img src={fb} alt="" />@CS--Ticket System</span>
+                    <span className='flex items-center gap-2 justify-center lg:justify-start'><img src={mail} alt="" />@CS--Ticket System</span>
                 </div>                
 
             </div>

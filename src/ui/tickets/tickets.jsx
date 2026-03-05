@@ -18,10 +18,10 @@ export const Tickets = ({playerPromise , onAdd , inProgress, onComplete,handleCo
     const [selectedTicket, setSelectedTicket] = useState(null)
 
   return (
-    <div className='mx-30 flex justify-between'>
+    <div className='lg:mx-30 mx-6 lg:flex justify-between '>
       <div>
         <h1 className='font-semibold text-2xl text-[#34485A] mb-10'>Customer Tickets</h1>
-      <div className='grid grid-cols-2  gap-x-8'>
+      <div className='lg:grid grid-cols-2  gap-x-8'>
           {
         inTickets.map(ticket => 
         <TicketCard 
