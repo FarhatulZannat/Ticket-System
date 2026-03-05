@@ -6,6 +6,8 @@ import { Navbar } from './ui/navbar'
 import { Tickets } from './ui/tickets/tickets'
 import { Footer } from './ui/footer'
 import { useState } from 'react'
+ import { ToastContainer  } from 'react-toastify';
+import { toast } from 'react-toastify'
 // import { use } from 'react'
 
 
@@ -25,11 +27,11 @@ function App() {
 
 
   const handleInProgress = (ticket)=>{
-    alert('Task Added')
+    toast('Task Added')
     setInProgress([...inProgress,ticket ])
   }
   const handleComplete = (id)=>{
-    alert('Task Completed')
+    toast('Task Completed')
     const updated = inProgress.filter(task => task.id !==id)
     setInProgress(updated)
 
@@ -68,6 +70,8 @@ function App() {
    </Suspense>
 
    <Footer></Footer>
+
+   <ToastContainer/>
    
    </div>
     
