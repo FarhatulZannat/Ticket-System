@@ -1,16 +1,24 @@
-# React + Vite
+# React 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## What is JSX, and why is it used?
 
-Currently, two official plugins are available:
+JSX (JavaScript XML) হলো JavaScript-এর একটি syntax extension, যা HTML-এর মতো দেখতে কিন্তু JavaScript-এর ভেতরে লেখা হয়।
+কেন ব্যবহার করা হয়:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+UI কোড লেখা সহজ ও readable হয়
+JavaScript আর HTML একসাথে লেখা যায়
+React কম্পোনেন্ট তৈরিতে ব্যবহৃত হয়
+Browser সরাসরি JSX বোঝে না, তাই Babel এটাকে regular JavaScript-এ convert করে।
+##  What is the difference between State and Props?
 
-## React Compiler
+Props → Parent থেকে Child-এ data পাঠানো হয়, read-only (পরিবর্তন করা যায় না)
+State → Component-এর নিজস্ব data, mutable (পরিবর্তন করা যায়)
+## What is the useState hook, and how does it work? chuto kore dao
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+useState হলো React-এর একটি hook যা component-এ data store ও update করতে দেয়। setValue() call করলে component re-render হয় . State সরাসরি change করা যাবে না → count = 5 [NO], setCount(5) [YES]
+## How can you share state between components in React?
 
-## Expanding the ESLint configuration
+React-এ state share করার সবচেয়ে common উপায় হলো "Lifting State Up" — state-টা common parent-এ রাখো, তারপর props দিয়ে নিচে পাঠাও।
+## How is event handling done in React?
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+React event handling-এ camelCase ব্যবহার করা হয় (onClick, onChange)। Function reference দিতে হয়, call করা যাবে না — onClick={handleClick} [YES], onClick={handleClick()} [NO]। Event object থেকে value পেতে e.target.value ব্যবহার করো। বড় logic-এর জন্য আলাদা handler function বানানো ভালো। HTML-এর onclick আর React-এর onClick দেখতে একই কিন্তু কাজের ধরন আলাদা।
