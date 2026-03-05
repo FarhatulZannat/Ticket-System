@@ -3,7 +3,7 @@ import { use } from 'react'
 import {TicketCard} from '../tickets/ticketCard'
 
 
-export const Tickets = ({playerPromise , onAdd , inProgress, onComplete,handleComplete }) => {
+export const Tickets = ({playerPromise , onAdd , inProgress, onComplete,handleComplete,resolved }) => {
     const ticketsData = use(playerPromise)
     // console.log(ticketsData)
 
@@ -30,6 +30,11 @@ export const Tickets = ({playerPromise , onAdd , inProgress, onComplete,handleCo
           </div>
         ))}
         <h1 className='font-semibold text-2xl text-[#34485A] mb-10'>Resolved Task</h1>
+        {resolved.map(ticket => (
+          <div key={ticket.id} className='bg-[#E0E7FF] p-4 rounded-md mb-6 shadow-sm space-y-4 '><h1 className='text-black font-semibold text-xl'>{ticket.title}</h1>
+          
+          </div>
+        ))}
       </div>
     </div>
 

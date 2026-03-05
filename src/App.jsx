@@ -18,7 +18,10 @@ const fetchTickets = async () =>{
 function App() {
   const playerPromise = fetchTickets()
 
-  const [inProgress, setInProgress] = useState([]) 
+  const [tickets, setTickets] = useState([]); 
+  const [inProgress, setInProgress] = useState([]) ;
+  const [resolved, setResolved] = useState([]); 
+
 
   const handleInProgress = (ticket)=>{
     alert('Task Added')
@@ -28,7 +31,12 @@ function App() {
     alert('Task Completed')
     const updated = inProgress.filter(task => task.id !==id)
     setInProgress(updated)
+    const resolveUpdate = inProgress.filter(task => task.id ==id)
+    setResolved(resolveUpdate)
   }
+
+
+
   
 
   return (
@@ -36,7 +44,10 @@ function App() {
     
    <Navbar></Navbar>
 
-   <Banner count = {inProgress.length}></Banner>
+   <Banner 
+   count = {inProgress.length}
+    resolvedCount = {resolved.length}>
+   </Banner>
 
    <Suspense fallback={<div className='flex justify-center items-center '><span class="loading loading-ring loading-xl"></span><span class="loading loading-ring loading-xl"></span><span class="loading loading-ring loading-xl"></span></div>}>
     <Tickets 
@@ -44,6 +55,7 @@ function App() {
     onAdd = {handleInProgress}
     inProgress={inProgress} 
     handleComplete={handleComplete}
+    resolved={resolved}
     ></Tickets>
    </Suspense>
 
