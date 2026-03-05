@@ -14,11 +14,12 @@ const fetchTickets = async () =>{
     const res = await fetch('/ticket.json')
     return res.json()
 }
+const playerPromise = fetchTickets()
 
 function App() {
-  const playerPromise = fetchTickets()
+  
 
-  const [tickets, setTickets] = useState([]); 
+  const [inTickets, setTickets] = useState([]); 
   const [inProgress, setInProgress] = useState([]) ;
   const [resolved, setResolved] = useState([]); 
 
@@ -31,8 +32,13 @@ function App() {
     alert('Task Completed')
     const updated = inProgress.filter(task => task.id !==id)
     setInProgress(updated)
+
     const resolveUpdate = inProgress.filter(task => task.id ==id)
-    setResolved(resolveUpdate)
+    setResolved(r => [...r , ...resolveUpdate])
+
+    const ticketsUpdate = inTickets.filter(task => task.id !==id)
+    setTickets(ticketsUpdate)
+
   }
 
 
@@ -56,6 +62,8 @@ function App() {
     inProgress={inProgress} 
     handleComplete={handleComplete}
     resolved={resolved}
+    inTickets={inTickets}
+    setTickets={setTickets}
     ></Tickets>
    </Suspense>
 
